@@ -5,7 +5,7 @@ Many of the applications I've worked with require a signature confirmation (I'm 
 ## Installation
 
 ```sh
-yarn add git@github.com:amazingCoding/react-native-signature-board.git
+yarn add https://github.com/amazingCoding/react-native-signature-board
 ```
 
 ## Usage
