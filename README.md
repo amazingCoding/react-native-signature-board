@@ -1,11 +1,11 @@
-# signature-board
+# react-native-signature-board
 A simple writing pad or doodling board that you can use in some programs that require a customer's signature for certainty.
 Many of the applications I've worked with require a signature confirmation (I'm not sure if it's legally valid). But in the react-native library, a lot of this kind of functionality is implemented using webview. That's why I'm sharing the library I wrote in my business.
 
 ## Installation
 
 ```sh
-npm install https://github.com/amazingCoding/react-native-signature-board
+yarn add git@github.com:amazingCoding/react-native-signature-board.git
 ```
 
 ## Usage
