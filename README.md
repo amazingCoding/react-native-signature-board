@@ -11,7 +11,7 @@ npm install https://github.com/amazingCoding/react-native-signature-board
 ## Usage
 ```js
 import { SignatureBoard, SignatureRef } from 'signature-board'
-const drawRef = React.useRef<SignatureRef | null(null)
+const drawRef = React.useRef<SignatureRef | null>(null)
 const Func = ()=>{
   return(
     <SignatureBoard
