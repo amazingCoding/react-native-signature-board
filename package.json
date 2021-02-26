@@ -1,5 +1,5 @@
 {
-  "name": "signature-board",
+  "name": "rn-signature-board",
   "version": "0.1.0",
   "description": "react native signature-board",
   "main": "lib/commonjs/index",
@@ -109,21 +109,8 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@react-native-community",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
+      "plugin:react/recommended"
+    ]
   },
   "eslintIgnore": [
     "node_modules/",

@@ -1,4 +1,6 @@
 #import <React/RCTViewManager.h>
+#import <React/RCTUIManager.h>
+#import "RNSignatureBoardView.h"
 
 @interface SignatureBoardViewManager : RCTViewManager
 @end
@@ -7,28 +9,32 @@
 
 RCT_EXPORT_MODULE(SignatureBoardView)
 
-- (UIView *)view
-{
-  return [[UIView alloc] init];
+- (UIView *)view{
+  return [[RNSignatureBoardView alloc] init];
 }
-
-RCT_CUSTOM_VIEW_PROPERTY(color, NSString, UIView)
-{
-  [view setBackgroundColor:[self hexStringToColor:json]];
+RCT_EXPORT_VIEW_PROPERTY(bgColor,NSString);
+RCT_EXPORT_VIEW_PROPERTY(lineColor,NSString);
+RCT_EXPORT_VIEW_PROPERTY(lineWidth,NSNumber);
+RCT_EXPORT_VIEW_PROPERTY(onImageFinish, RCTBubblingEventBlock)
+RCT_EXPORT_METHOD(clear:(nonnull NSNumber*) reactTag) {
+  [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, NSDictionary<NSNumber *,RNSignatureBoardView *> *viewRegistry) {
+    RNSignatureBoardView *view = viewRegistry[reactTag];
+      if (!view || ![view isKindOfClass:[RNSignatureBoardView class]]) {
+          RCTLogError(@"Cannot find NativeView with tag #%@", reactTag);
+          return;
+      }
+      [view clear];
+  }];
 }
-
-- hexStringToColor:(NSString *)stringToConvert
-{
-  NSString *noHashString = [stringToConvert stringByReplacingOccurrencesOfString:@"#" withString:@""];
-  NSScanner *stringScanner = [NSScanner scannerWithString:noHashString];
-
-  unsigned hex;
-  if (![stringScanner scanHexInt:&hex]) return nil;
-  int r = (hex >> 16) & 0xFF;
-  int g = (hex >> 8) & 0xFF;
-  int b = (hex) & 0xFF;
-
-  return [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f];
+RCT_EXPORT_METHOD(getImage:(nonnull NSNumber*) reactTag widthOpaque:(BOOL) opaque) {
+  [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, NSDictionary<NSNumber *,RNSignatureBoardView *> *viewRegistry) {
+    RNSignatureBoardView *view = viewRegistry[reactTag];
+      if (!view || ![view isKindOfClass:[RNSignatureBoardView class]]) {
+          RCTLogError(@"Cannot find NativeView with tag #%@", reactTag);
+          return;
+      }
+    [view getImage:opaque];
+  }];
 }
 
 @end
