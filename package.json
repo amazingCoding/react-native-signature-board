@@ -1,5 +1,5 @@
 {
-  "name": "rn-signature-board",
+  "name": "signature-board",
   "version": "0.1.0",
   "description": "react native signature-board",
   "main": "lib/commonjs/index",
@@ -80,13 +80,11 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
+
     }
   },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
     ]
   },
   "release-it": {
