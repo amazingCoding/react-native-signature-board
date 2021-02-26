@@ -1,6 +1,6 @@
 {
   "name": "signature-board",
-  "version": "0.2.2",
+  "version": "0.2.5",
   "description": "react native signature-board",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,13 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "signature-board.podspec",
-    "!lib/typescript/example",
-    "!android/build",
-    "!ios/build",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
+    "signature-board.podspec"
   ],
   "scripts": {
     "test": "jest",
