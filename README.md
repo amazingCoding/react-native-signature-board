@@ -5,7 +5,12 @@ Many of the applications I've worked with require a signature confirmation (I'm 
 ## Installation
 
 ```sh
-yarn add https://github.com/amazingCoding/react-native-signature-board
+yarn add signature-board
+
+// ios
+cd ios 
+pod install
+
 ```
 
 ## Usage
@@ -27,7 +32,8 @@ const Func = ()=>{
   )
 }
 ```
-See examples for more details
+See example for more details
+更多细节查看 examples 目录
 ```sh
 cd example
 npm run android 
