@@ -13,12 +13,12 @@ pod install
 
 ```
 ## example
-* IOS demo
+* IOS demo  
   ![ios](./ios.gif)
 
-* android demo
+* android demo  
   ![ios](./android.gif)
-  
+
 
 ## Usage
 ```js
