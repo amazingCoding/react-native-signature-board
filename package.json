@@ -1,6 +1,6 @@
 {
   "name": "signature-board",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "react native signature-board",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

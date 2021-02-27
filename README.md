@@ -12,6 +12,13 @@ cd ios
 pod install
 
 ```
+## example
+* IOS demo
+  ![ios](./ios.gif)
+
+* android demo
+  ![ios](./android.gif)
+  
 
 ## Usage
 ```js
@@ -36,8 +43,12 @@ See example for more details
 更多细节查看 examples 目录
 ```sh
 cd example
-npm run android 
-npm run ios
+yarn
+yarn run android 
+yarn run ios
+// maybe you should 
+cd ios
+pod install
 ```
 
 ## Properties
